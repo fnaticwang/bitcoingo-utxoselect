@@ -58,7 +58,9 @@ func main() {
 	}
 	txOut[0] = tx_out1
 	txOut[1] = tx_out2
-	in, out , fee := coinSelect(txIn, txOut, 77)
+	//feeRate, detail:https://bitcoinfees.earn.com/api
+	var feeRate uint64 = 77
+	in, out , fee := coinSelect(txIn, txOut, feeRate)
 	
 	for i := range in {
 		fmt.Println(in[i].Hash)
@@ -93,9 +95,9 @@ func coinSelect(utxos []*common.TxIn, outputs []*common.TxOut, feeRate uint64) (
 	sort.Sort(TxInSlice(utxos))
 
 	// attempt to use the blackjack strategy first (no change output)
-	a, b, c := BitcoinUtxo.Blackjack(utxos, outputs, feeRate)
-	if a != nil {
-		return a, b, c
+	in, out, fee := BitcoinUtxo.Blackjack(utxos, outputs, feeRate)
+	if in != nil {
+		return in, out, fee
 	}
 	// else, try the accumulative strategy
 	return BitcoinUtxo.Accumulative(utxos, outputs, feeRate)
