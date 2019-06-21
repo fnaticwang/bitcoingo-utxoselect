@@ -1,4 +1,4 @@
-# bitcoin_utxo_select
+# bitcoin utxos selection algorithm
 bitcoin utxos selection algorithm of golang
 
 Since bitcoin adopts UTXO(Unspent Transaction Output) model, its BTC is scattered in different UTXO even if it is the same address.
