@@ -75,7 +75,6 @@ func main() {
 	}
 	fmt.Println("*************************************")
 	fmt.Println(fee)
-	//fmt.Println(i[0].Value, i[1].Value, i[2].Value, i[3].Value)
 }
 
 type TxInSlice []*common.TxIn
@@ -98,7 +97,6 @@ func coinSelect(utxos []*common.TxIn, outputs []*common.TxOut, feeRate uint64) (
 	if a != nil {
 		return a, b, c
 	}
-	fmt.Println("Accumulative")
 	// else, try the accumulative strategy
 	return BitcoinUtxo.Accumulative(utxos, outputs, feeRate)
 }
