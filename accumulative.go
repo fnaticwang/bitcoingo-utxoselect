@@ -1,7 +1,7 @@
 package BitcoinUtxo
 
 import (
-	"BitcoinUtxo/common"
+	"bitcoingo-utxoselect/common"
 )
 
 // add inputs until we reach or surpass the target value (or deplete)
