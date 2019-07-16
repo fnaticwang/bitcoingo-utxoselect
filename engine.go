@@ -1,7 +1,7 @@
 package BitcoinUtxo
 
 import (
-	"BitcoinUtxo/common"
+	"bitcoingo-utxoselect/common"
 	"sort"
 )
 
