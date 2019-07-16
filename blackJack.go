@@ -1,7 +1,7 @@
 package BitcoinUtxo
 
 import (
-	"BitcoinUtxo/common"
+	"bitcoingo-utxoselect/common"
 )
 
 func Blackjack(utxos []*common.TxIn, outputs []*common.TxOut, feeRate uint64) ([]*common.TxIn, []*common.TxOut, uint64) {
