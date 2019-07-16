@@ -1,8 +1,8 @@
 package main
 
 import (
-	"BitcoinUtxo"
-	"BitcoinUtxo/common"
+	"bitcoingo-utxoselect"
+	"bitcoingo-utxoselect/common"
 	"fmt"
 )
 
